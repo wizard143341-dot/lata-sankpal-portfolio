@@ -67,7 +67,11 @@ const ResearchSection = () => {
           {/* Research Stats */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {stats.map((stat, index) => (
-              <Card key={index} className="p-6 text-center shadow-card">
+              <Card 
+                key={index} 
+                className="p-6 text-center shadow-card animate-zoom-in"
+                style={{ animationDelay: `${0.2 + index * 0.1}s`, animationFillMode: 'both' }}
+              >
                 <div className="w-16 h-16 bg-academic-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-academic-blue" />
                 </div>
@@ -85,7 +89,7 @@ const ResearchSection = () => {
           </div>
 
           {/* Research Focus */}
-          <Card className="p-8 mb-12 shadow-card">
+          <Card className="p-8 mb-12 shadow-card animate-fade-up" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
             <h3 className="text-2xl font-bold text-academic-blue mb-4">Primary Research Area</h3>
             <div className="bg-academic-blue/5 p-6 rounded-lg">
               <h4 className="text-xl font-semibold text-academic-blue mb-3">
@@ -103,12 +107,16 @@ const ResearchSection = () => {
 
           {/* Recent Publications */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-academic-blue mb-8 text-center">
+            <h3 className="text-2xl font-bold text-academic-blue mb-8 text-center animate-fade-in" style={{ animationDelay: '0.7s', animationFillMode: 'both' }}>
               Recent Publications
             </h3>
             <div className="space-y-6">
               {publications.map((pub, index) => (
-                <Card key={index} className="p-6 shadow-card hover:shadow-academic transition-shadow duration-300">
+                <Card 
+                  key={index} 
+                  className="p-6 shadow-card hover:shadow-academic transition-all duration-300 hover:scale-[1.02] animate-slide-in-left"
+                  style={{ animationDelay: `${0.8 + index * 0.1}s`, animationFillMode: 'both' }}
+                >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
@@ -136,7 +144,7 @@ const ResearchSection = () => {
           </div>
 
           {/* External Links */}
-          <div className="text-center">
+          <div className="text-center animate-fade-up" style={{ animationDelay: '1.1s', animationFillMode: 'both' }}>
             <h3 className="text-2xl font-bold text-academic-blue mb-6">
               Research Profiles
             </h3>

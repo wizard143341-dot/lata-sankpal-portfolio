@@ -32,7 +32,7 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-8">
-            <Card className="p-8 shadow-card">
+            <Card className="p-8 shadow-card animate-fade-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
               <p className="text-lg leading-relaxed text-academic-gray mb-6">
                 With over three decades of dedicated service in computer engineering education, 
                 I bring a wealth of experience in teaching, research, and academic leadership. 
@@ -57,7 +57,11 @@ const AboutSection = () => {
             {/* Interests */}
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               {interests.map((interest, index) => (
-                <Card key={index} className="p-6 text-center shadow-card hover:shadow-academic transition-shadow duration-300">
+                <Card 
+                  key={index} 
+                  className="p-6 text-center shadow-card hover:shadow-academic transition-all duration-300 hover:scale-105 animate-zoom-in"
+                  style={{ animationDelay: `${0.4 + index * 0.1}s`, animationFillMode: 'both' }}
+                >
                   <div className="w-16 h-16 bg-academic-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <interest.icon className="w-8 h-8 text-academic-blue" />
                   </div>

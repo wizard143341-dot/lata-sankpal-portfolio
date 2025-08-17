@@ -41,7 +41,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Teaching Experience Highlight */}
-          <Card className="p-8 mb-12 gradient-academic text-white shadow-academic">
+          <Card className="p-8 mb-12 gradient-academic text-white shadow-academic animate-zoom-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             <div className="text-center">
               <div className="text-6xl font-bold mb-2">30+</div>
               <div className="text-2xl font-semibold mb-4">Years of Teaching Experience</div>
@@ -55,7 +55,11 @@ const ExperienceSection = () => {
           {/* Job Roles */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {roles.map((role, index) => (
-              <Card key={index} className="p-6 text-center shadow-card hover:shadow-academic transition-all duration-300 hover:scale-105">
+              <Card 
+                key={index} 
+                className="p-6 text-center shadow-card hover:shadow-academic transition-all duration-300 hover:scale-105 animate-fade-up"
+                style={{ animationDelay: `${0.4 + index * 0.1}s`, animationFillMode: 'both' }}
+              >
                 <div className="w-16 h-16 bg-academic-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <role.icon className="w-8 h-8 text-academic-blue" />
                 </div>
@@ -70,7 +74,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Expertise Areas */}
-          <div className="mt-16">
+          <div className="mt-16 animate-fade-up" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
             <h3 className="text-2xl font-bold text-academic-blue text-center mb-8">
               Areas of Expertise
             </h3>
@@ -87,7 +91,12 @@ const ExperienceSection = () => {
                 "Technology Integration",
                 "Student Mentorship"
               ].map((skill, index) => (
-                <Badge key={index} variant="secondary" className="px-4 py-2 text-sm">
+                <Badge 
+                  key={index} 
+                  variant="secondary" 
+                  className="px-4 py-2 text-sm animate-slide-in-left"
+                  style={{ animationDelay: `${1 + index * 0.05}s`, animationFillMode: 'both' }}
+                >
                   {skill}
                 </Badge>
               ))}
